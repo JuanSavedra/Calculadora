@@ -22,13 +22,23 @@ class CalcController {
         this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
     }
 
+    addEventListenerAll(element, events, funct) {
+        events.split(' ').forEach(event => {
+            element.addEventListener(event, funct, false);
+        })
+    }
+
     initButtonsEvents() {
         let buttons = document.querySelectorAll("#buttons > g, #parts > g");
 
         buttons.forEach((btn, index) => {
-            btn.addEventListener('click', e => {
+            this.addEventListenerAll(btn, 'click drag', event => {
                 console.log(btn.className.baseVal.replace("btn-", ""));
             });
+
+            this.addEventListenerAll(btn, "mouseover mouseup mousedown", event => {
+                btn.style.cursor = "pointer";
+            })
         });
     }
 
