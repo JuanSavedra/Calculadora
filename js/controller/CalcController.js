@@ -138,9 +138,7 @@ class CalcController {
             //String
             if (this.isOperator(value)) {
                 this.setLastOperation(value);
-            } else if (isNaN(value)) {
-                console.log("Outro valor", value);
-            } else {
+            }else {
                 this.pushOperation(value);
 
                 //Atualizando o display
@@ -152,12 +150,24 @@ class CalcController {
                 this.pushOperation(value);
             } else {
                 let newValue = this.getLastOperation().toString() + value.toString();
-                this.setLastOperation(parseInt(newValue));
+                this.setLastOperation(parseFloat(newValue));
 
                 //Atualizando o display
                 this.setLastNumberToDisplay();
             }
         }
+    }
+
+    addDot() {
+        let lastOperation = this.getLastOperation();
+        
+        if (this.isOperator(lastOperation) || !lastOperation) {
+            this.pushOperation("0.");
+        } else {
+            this.setLastOperation(lastOperation.toString() + '.');
+        }
+
+        this.setLastNumberToDisplay();
     }
 
     executeButton(value) {
@@ -184,7 +194,7 @@ class CalcController {
                 this.addOperation('%');
                 break;
             case 'ponto':
-                this.addOperation('.');
+                this.addDot('.');
                 break;
             case 'igual':
                 this.calc();
