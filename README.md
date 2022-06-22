@@ -1,7 +1,7 @@
 # Calculadora
-### Uma calculadora feita em Javascript com a ajuda do curso da HCODe.
+## Uma calculadora feita em Javascript com a ajuda do curso da HCODe.
 
-## Funções da Calculadora:
+### Funções da Calculadora:
 - ✔️ Contas com números reais
 - ✔️ Soma
 - ✔️ Subtração
