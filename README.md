@@ -1,8 +1,6 @@
 # Calculadora
 ### Uma calculadora feita em Javascript com a ajuda do curso da HCODe.
 
-![Screenshot_1](https://user-images.githubusercontent.com/66082393/174127261-cc14af1e-104d-4d51-81fd-6bd3ccf80dd1.png)
-
 ## Funções da Calculadora:
 - ✔️ Contas com números reais
 - ✔️ Soma
@@ -15,6 +13,7 @@
 - ✔️ Entrada de dados pelo teclado
 
 ### Falta fazer
-- Nada
+- ❗ Função exponencial
 
 ### Fotos do Projeto
+![Screenshot_1](https://user-images.githubusercontent.com/66082393/174127261-cc14af1e-104d-4d51-81fd-6bd3ccf80dd1.png)
